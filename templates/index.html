@@ -15,17 +15,16 @@
 
 <body>
   <div class='page-div'>
+
     <div class='top-page'>
       <nav class="navbar navbar-dark">
 
 
         <div class="container-fluid">
-
           <a class="navbar-brand" href={{url_for('index')}}>
             <img alt="Brand" src="static/assets/b.jpg" class="navbar-image">
           </a>
           <ul class="nav nav-pills right-float">
-
             <li class='right-float'>
               <a class='page-links' href={{url_for('project')}}> Projects </a>
             </li>
@@ -38,12 +37,13 @@
             <li class='right-float'>
               <a class='page-links' href={{url_for('about')}}> About </a>
             </li>
-
           </ul>
         </div>
+
         <a href = https://www.youtube.com/watch?v=Vhh_GeBPOhs> <h1 class = 'center'> Development, Development, Development </h1> </a>
       </nav>
     </div>
+
     <div class='bottom-page'>
       <div class='container-fluid post-wrapper'>
 
@@ -51,54 +51,68 @@
 
           <div class='post-content'>
             <div class='header-date'>
-              <a target=_blank href=http://hangman.zone> <h2 class='title'>HangMan</h2></a>
+              <h2 class='title'>HangMan</h2>
             </div>
-            <p> Do More. </p> <br>
-            <a target=_blank href=https://github.com/bkunbargi/hangman> Github </a> <br>
-              <a target=_blank href=http://hangman.zone/about.html> What is it </a> </div> <div class='post-content'>
+            <p> Plan trips and do More. </p> <br>
+              <a target=_blank href="http://hangman.zone"> <button type="button" class="btn btn-primary">Visit</button></a>
+
+            </div>
+
+              <div class='post-content'>
                 <div class='header-date'>
-                  <h2 class='title'>Collections</h2>
+                  <h2 class='title'>Twitter Bot</h2>
                 </div>
-                <p>Collection of collections</p>
+                <p>Sentinment Analyzer and Tweeting from a private account</p>
+                <a href={{url_for('project',_anchor='twitterbot')}}><button type="button" class="btn btn-primary">Tweet</button></a>
+
           </div>
 
         </div>
 
-
-        <div class='row left'>
+<!--
+        <div class='row mid'>
 
           <div class='post-content'>
             <div class='header-date'>
-              <a target=_blank href=http://hangman.zone> <h2 class='title'>HangMan</h2></a>
+              <a target=_blank href=http://hangman.zone> <h2 class='title'>Github</h2></a>
             </div>
-            <p> Do More. </p> <br>
-            <a target=_blank href=https://github.com/bkunbargi/hangman> Github </a> <br>
-              <a target=_blank href=http://hangman.zone/about.html> What is it </a> </div> <div class='post-content'>
-                <div class='header-date'>
-                  <h2 class='title'>Collections</h2>
-                </div>
-                <p>Collection of collections</p>
-          </div>
+            <p>Check out my Github</p> <br>
+            </div>
+
+
+            <div class='post-content'>
+              <div class='header-date'>
+                <h2 class='title'>Fun Zone</h2>
+              </div>
+              <p>Look at it, it's so fun.</p>
+            </div>
+
 
         </div>
+      -->
 
         <div class='row right'>
 
-          <div class='post-content'>
-            <div class='header-date'>
-              <h2 class='title'>TBD</h2>
-            </div>
-            <p>Fun Zone</p>
-          </div>
+
 
           <div class='post-content'>
             <div class='header-date'>
-              <a target=_blank href=http://bishersworld.herokuapp.com> <h2 class='title'> Bots </h2> </a>
+             <h2 class='title'> Reddit Bot </h2>
             </div>
-            <p>Instagram-Reddit-Twitter Bots</p> <br>
-            <a href=#> Github </a> <br>
-            <a href=#> What bots?</a>
+            <p>Searching made easy</p> <br>
+            <a href={{url_for('project',_anchor='redditbot')}}><button type="button" class="btn btn-primary">Check it out</button></a> <br> <br>
+
           </div>
+
+          <div class='post-content'>
+                <div class='header-date'>
+                  <h2 class='title'>Instagram Bot</h2>
+                </div>
+                <p>Post to a public account</p>
+                <a href={{url_for('project',_anchor='instabot')}}><button type="button" class="btn btn-primary">Post</button></a>
+          </div>
+
+
 
         </div>
 

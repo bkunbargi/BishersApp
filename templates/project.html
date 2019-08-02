@@ -45,29 +45,163 @@
     <div class='bottom-page'>
       <div class='post-wrapper'>
         <!-- Inject Code here -->
-        <div class='post-content'>
+
+
+
+        <div id = 'redditbot'  class='post-content'>
           <div class='header-date'>
             <p class='date'>8/1/2019</p> <br>
             <h2 class='title'>Reddit Bot</h2>
+            <img class = 'project-image' src = '/static/assets/snoo2.png'>
           </div>
-          <p>Search reddit from here </p> <br>
-          <p>Respond to someone else </p>
+          <p class = 'center'>Do a quick search of reddit to find exactly what you're looking for</p>
+          <p class = 'center'>Anonymously respond to a comment using this third party account </p>
+          <div class = 'formbox'>
+              <form class = 'formdisplay' action = '/redditbot' method = 'POST'>
+                <p> Search Reddit </p>
+                <input type = 'text' name = 'subkey' placeholder="Topic ex. NBA" class = 'redditinput'>
+                <input type = 'text' name = 'redditkeyword' placeholder="Subtopic ex. Lebron" class = 'redditinput'>
+                <input type = 'submit' name ='ugh'>
+                <br> <br>
+                <p> Anonymously Respond </p>
+                <input type = 'text' name = 'madecomment' placeholder="Comment to respond" class = 'redditinput'>
+                <input type = 'text' name = 'subid' placeholder="Subreddit ID" class = 'redditinput'>
+                <input type = 'text' name = 'uresponse' placeholder="Response" class = 'redditinput'>
+
+                <input type = 'submit' name ='ugh'>
+              </form>
+          </div>
+
+          <div id = 'bigred' class = 'persiproj'>
+            <div class="tab">
+               <button class="tablinks" onclick="openCity(event, 'search')">Searching</button>
+               <button class="tablinks" onclick="openCity(event, 'post')">Responding</button>
+            </div>
+
+              <div id = 'search' class = 'tabcontent'>
+
+              <p>A two step search function that pulls all related subreddits to input 1 and grabs all the comments<br> from threads with Input 2 in the title.
+              Enter both keywords click submit, sit back for a minute
+              Then with a quick control+f that is simultaneously checking all threads at once to find the comment chain that has what you're looking for.
+              <br><br>Required Input:
+              Input 1: The type of subreddit that is relevant to what you're looking for. <br>
+              Input 2: The Keyword of what you're looking for, e.x. "I'm looking for information related to Django(Input 2)
+              I might find it in Web Development(Input 1) related subreddits" </p>
+              </div>
+
+              <div id = 'post' class = 'tabcontent'>
+
+              <p>Reply to a comment keeping your username anonymous:<br>
+                Uses an account associated with this bot to find the comment to respond to and responds with the submitted comment
+                <br><br>Required Input:<br>
+                Input 1: The thread ID(Input 1), can be found in the link page  PUT A PICTURE  <br>
+                Input 2: The comment that you want to respond to <br>
+                Input 3: Your desired response to that comment (Input 2) <br>
+              </p>
+            </div>
+
         </div>
 
-        <div class='post-content'>
+
+        </div>
+
+
+
+        <div id = 'twitterbot' class='post-content'>
           <div class='header-date'>
             <p class='date'>8/1/2019</p> <br>
             <h2 class='title'>Twitter Bot</h2>
+            <img class = 'project-image' src = '/static/assets/twitter.png'>
           </div>
           <p>Tweet from my account</p>
+
+          <div class = 'formbox'>
+
+              <form class = 'formdisplay' action = '/twitterbot' method = 'POST'>
+                <p> Tweet or Respond to someone. </p>
+                <input type = 'text' name = 'user_tweet' placeholder="Tweet">
+                <input type = 'text' name = 'responderhandle' placeholder="Tweeting @">
+                <input type = 'text' name = 'statusid' placeholder = 'Status Id'>
+                <input type = 'submit' name ='ugh'>
+                <br>
+                <p> Run a sentiment analyzer on a given keyword and have it tweeted! </p>
+                <input type = 'text' name = 'keyword1' placeholder="Sentinment Analysis">
+                <input type = 'submit' name ='ugh'>
+              </form>
+          </div>
+
+          <div id = 'tweetdude' class = 'persiproj'>
+
+            <div class="tab">
+               <button class="tablinks" onclick="openCity(event, 'SentAnaly')">Sentiment Analysis</button>
+               <button class="tablinks" onclick="openCity(event, 'tweetat')">Tweet @</button>
+
+            <div id = 'SentAnaly' class = 'tabcontent'>
+              <p>Keyword Sentiment Analysis:<br>
+                 Retweets the highest and lowest scoring sentimets pertaining to the keyword.
+              <br><br>Required Input:<br>
+              Keyword: This keyword is the only required input for this functionality.
+            </p>
+
+            </div>
+            <div id = 'tweetat' class = 'tabcontent'>
+              <p> Anonymous Tweeting: <br>
+                  Use the account associated with this bot to tweet at someone.
+              <br><br>Required Input:<br>
+              User Tweet: Your desired tweet <br>
+              Username: The username of the person you are responding to drop the '@'<br>
+              Status ID: Can be found in the URL when the tweet is open in your browser PICTURE  <br>
+            </p>
+
+            </div>
+          </div>
+
+
+          </div>
+
         </div>
 
-        <div class='post-content'>
+        <div id = 'instabot' class='post-content'>
           <div class='header-date'>
             <p class='date'>8/1/2019</p> <br>
             <h2 class='title'>Instagram Bot</h2>
+            <img class = 'project-image' src = '/static/assets/insta.png'>
           </div>
-          <p>Post images to my Instagram account</p>
+          <p>Post images to a community run Instagram account</p>
+          <div id = 'instaman' class = 'persiproj'>
+
+               <div class = 'formbox'>
+
+                    <form class = 'formdisplay' action = '/instabot' method = 'POST' enctype="multipart/form-data">
+                      <input type='text' name='tpic' placeholder="Image Url">
+                      <p> Or </p>
+                      <label for="file-upload" class="custom-file-upload">
+                        <input id='file-upload' type="file" name="file" accept="image/*" onchange="document.getElementById('instabotpreview').src = window.URL.createObjectURL(this.files[0])">
+                        <p>Click to upload an image </p>
+                      </label>
+                      <img id="instabotpreview">
+                      <input type='text' name='caption' placeholder="Add a Caption">
+                      <input type = 'submit' name ='ugh'>
+
+                    </form>
+                </div>
+
+            <div id = 'Posting' class = 'tabcontent'>
+              <p> A community controlled Instagram page: <br>
+                  Post with either a URL or choose a file to upload from computer
+              <br><br>Required Input:<br>
+              First Input: Accepts the URL to an image <br>
+              Upload: To upload an image from hard drive and displays the preview<br>
+              One or the other only of the above <br>
+              Caption: Associates a caption and/or hashtags with the image being uploaded from URL or File <br>
+            </p>
+
+            </div>
+
+
+
+        </div>
+
         </div>
 
 
@@ -85,5 +219,6 @@
 
   </div>
 </body>
+
 
 </html>

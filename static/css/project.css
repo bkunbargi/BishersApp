@@ -1,5 +1,5 @@
-.center{ text-align:center;
-
+.center{
+text-align:center;
 color:#337ab7;
 font-family: 'Hind', sans-serif;
 font-weight: bold;
@@ -106,3 +106,149 @@ p{
   font-family: 'Comfortaa';
   color: #8c8c8c;
 }
+
+/* Ported Over from Bishersworld */
+
+.project-image{
+  align-self: center;
+  width: 150px;
+  height: auto;
+}
+
+
+.tagline-text{
+
+
+}
+
+
+
+.formdiv{
+
+  }
+
+.formdisplay{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+input{
+-webkit-border-radius: 5px;
+}
+
+
+#instabotpreview{
+  width:150px;
+  height:auto;
+  border: .5px solid white;
+  -webkit-border-radius: 5px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+
+.custom-file-upload {
+    -webkit-border-radius: 5px;
+    /* box-shadow: 1px 1px 1px 1px; */
+
+}
+
+
+/*
+.tab {
+    float: left;
+
+}
+
+.tablinks button {
+    display: block;
+    background-color: inherit;
+    padding: 22px 16px;
+    width: 100%;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    border: none;
+    font-weight: bold;
+    color: black;
+
+}
+
+*/
+
+
+
+
+/*For insta file uploading
+input[type="file"] {
+    display: none;
+}
+
+
+.custom-file-upload {
+    -webkit-border-radius: 5px;
+
+}
+
+*/
+
+
+/*
+For displaying possts
+
+<div id= 'outputs'>
+<h2 class = 'specialp'>{{info}}</h2>
+</div>
+
+#outputs{
+  display: flex;
+  align-content: flex-start;
+  padding-top: 15px;
+}
+*/
+
+
+/* Hiding stuff on start
+
+#craighistory,#tweetat,#SentAnaly,#Posting,#search,#post,#instaman,#bigred,#tweetdude,#craiger{
+  display: none;
+}
+
+*/
+
+
+
+/* How to use functionality
+.projwrapper{
+  padding-left: 1em;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.projwrapper > h2{
+  color: white;
+  font-family: 'Dosis', sans-serif;
+
+}
+
+.othertab {
+    display: block;
+    background-color: inherit;
+    padding: 22px 16px;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    border: none;
+    font-weight: bold;
+    color: black;
+}
+
+*/
