@@ -1,0 +1,89 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="static/assets/b.jpg">
+  <link rel="stylesheet" type="text/css" href="static/css/about.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+  <title>Who?</title>
+</head>
+
+<body>
+  <div class='page-div'>
+    <div class='top-page'>
+      <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href={{url_for('index')}}>
+            <img alt="Brand" src="static/assets/b.jpg" class="navbar-image">
+          </a>
+
+
+
+            <ul class="nav nav-pills float-right">
+
+            <li>
+              <a class='page-links' href={{url_for('index')}}> Home </a>
+            </li>
+
+            <li>
+              <a class='page-links' href={{url_for('project')}}> Projects </a>
+            </li>
+
+            <li>
+              <a class='page-links' href={{url_for('post')}}> Blog </a>
+            </li>
+
+          </ul>
+
+        </div>
+        <h1 class = 'center'> Who? </h1>
+      </nav>
+    </div>
+
+
+    <div class='bottom-page'>
+      <div class = 'post-wrapper'>
+        <div class = 'post-content'>
+          <div class = 'header-date'>
+            <h2 class='title'>A little about me</h2>
+          </div>
+
+            <p>Welcome to My.World! I started this website a month ago ago to learn some front end development and to showcase things I've built.
+            Along the way I got carried away and built out some bots, then I got carried away and built out a web application and it's snowballed into
+            what it is now. I'm excited for it to continue snowballing and to share it with the community.
+
+            <br> <br> I occansionally write guides about what I've
+            built as well as posts about something new that I'm learning. You don't understand something unless you can teach it, right? I'm a backend developer at heart
+            and there's something about operating systems that gets me feeling some type of way.
+
+            I studied economics at UCI but I'm currently working as a software developer in Boston, MA.
+            I'm learning every day, and would love to chat. Whether you need something built, want to build something together, or just want to talk computer science, yes I stan the CS world pretty hard.
+
+
+
+          </p>
+          <br>
+          <div class = 'email-submit'>
+          <p style="text-align:center"> Email me and let's talk! </p>
+          <input type="text">
+        </div>
+          </div>
+
+      </div>
+
+    </div>
+    <div class="footer">
+      <a target=_blank href="https://twitter.com/yabish92" class="fa fa-twitter fa-lg black"></a>
+      <a target=_blank href="https://www.linkedin.com/in/bisherk" class="fa fa-linkedin fa-lg black"></a>
+      <a target=_blank href="https://github.com/bkunbargi" class="fa fa-github fa-lg black"></a> <br>
+      <a class = 'black'> Email me @ b.kunbargi@gmail.com </a>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+.center{
+  text-align:center;
+  color:#337ab7;
+  font-family: 'Hind', sans-serif;
+  font-weight: bold;
+}
+
+.page-div {
+  position: absolute;
+  background: #f7f7f7;
+}
+
+.top-page{
+
+}
+
+
+p{
+  color:#8c8c8c;
+  font-family: 'Comfortaa';
+}
+
+/* Nav */
+
+.float-right{
+  float:right
+}
+
+.page-links {
+  font-size: 20px;
+  color:#8c8c8c;
+  font-family: 'Comfortaa';
+  font-weight: bold;
+}
+
+.navbar {
+background-color:white;
+text-align: center;
+}
+
+.navbar-image{
+height:85%;
+}
+/*Page Content*/
+.header-date{
+
+}
+
+.date{
+  font-weight: bold;
+  float:right;
+  color:#8c8c8c;
+}
+
+
+.title{
+   font-family: 'Comfortaa';
+   color: #8c8c8c;
+   font-weight: bold;
+   text-align: center;
+}
+
+.post-wrapper {
+  display:flex;
+  border-radius:2px;
+  justify-content: space-around;
+  margin-bottom:20px;
+  background: #f7f7f7;
+
+}
+
+
+.post-content{
+  background-color:white;
+  border-radius: 2px;
+  padding:30px;
+  margin-bottom:25px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  margin-top:45px;
+  width:80%;
+  height:auto;
+}
+
+.post-content:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  height:5%;
+}
+
+.black{
+  color:#8c8c8c;
+
+}
+.email-submit{
+  text-align: center;
+  width: 100%;
+  font-size: 16;
+  font-weight: bold;
+}
+
+input[type=text]{
+  border-radius:5px;
+}

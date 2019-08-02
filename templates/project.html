@@ -1,0 +1,89 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="static/assets/b.jpg">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="static/css/project.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+  <title>Projects</title>
+</head>
+
+<body>
+  <div class='page-div'>
+    <div class='top-page'>
+      <nav class="navbar navbar-default">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href={{url_for('index')}}>
+              <img alt="Brand" src="static/assets/b.jpg" class="navbar-image">
+            </a>
+
+          <ul class="nav nav-pills float-right">
+
+            <li>
+              <a class='page-links' href={{url_for('index')}}> Home </a>
+            </li>
+
+            <li>
+              <a class='page-links' href={{url_for('post')}}> Post </a>
+            </li>
+            <li class='right-float'>
+              <a class='page-links' href={{url_for('about')}}> About </a>
+            </li>
+
+          </ul>
+        </div>
+        <h1 class = 'center'> Projects </h1>
+      </nav>
+
+    </div>
+    <div class='bottom-page'>
+      <div class='post-wrapper'>
+        <!-- Inject Code here -->
+        <div class='post-content'>
+          <div class='header-date'>
+            <p class='date'>8/1/2019</p> <br>
+            <h2 class='title'>Reddit Bot</h2>
+          </div>
+          <p>Search reddit from here </p> <br>
+          <p>Respond to someone else </p>
+        </div>
+
+        <div class='post-content'>
+          <div class='header-date'>
+            <p class='date'>8/1/2019</p> <br>
+            <h2 class='title'>Twitter Bot</h2>
+          </div>
+          <p>Tweet from my account</p>
+        </div>
+
+        <div class='post-content'>
+          <div class='header-date'>
+            <p class='date'>8/1/2019</p> <br>
+            <h2 class='title'>Instagram Bot</h2>
+          </div>
+          <p>Post images to my Instagram account</p>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+    <div class="footer">
+      <a target=_blank href="https://twitter.com/yabish92" class="fa fa-twitter fa-lg black"></a>
+      <a target=_blank href="https://www.linkedin.com/in/bisherk" class="fa fa-linkedin fa-lg black"></a>
+      <a target=_blank href="https://github.com/bkunbargi" class="fa fa-github fa-lg black"></a> <br>
+      <a class = 'black'> Email me @ b.kunbargi@gmail.com </a>
+    </div>
+
+  </div>
+</body>
+
+</html>

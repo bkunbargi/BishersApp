@@ -1,0 +1,109 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="static/assets/b.jpg">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="static/css/postpage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+  <title>Posts</title>
+</head>
+
+<body>
+  <div class='page-div'>
+    <div class='top-page'>
+
+      <nav class="navbar navbar-dark">
+
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href={{url_for('index')}}>
+            <img alt="Brand" src="static/assets/b.jpg" class="navbar-image">
+          </a>
+
+          <ul class="nav nav-pills float-right">
+
+
+
+            <li>
+              <a class='page-links' href={{url_for('index')}}> Home </a>
+            </li>
+
+            <li>
+              <a class='page-links' href={{url_for('project')}}> Projects </a>
+            </li>
+
+            <li class='right-float'>
+              <a class='page-links' href={{url_for('about')}}> About </a>
+            </li>
+
+          </ul>
+        </div>
+        <h1 class = 'center'> Posts </h1>
+      </nav>
+
+    </div>
+    <div class='bottom-page'>
+      <div class='post-wrapper'>
+        <div class='post-content'>
+          <div class='header-date'>
+            <p class='date'> 7/25/2019 </p>
+            <br>
+            <h2 class='title center'>Building Out Hangman</h2>
+          </div>
+          <article>
+            <p>
+              <p class='center'> <strong> TL;DR </strong> </p>
+              Hangman was written using HTML, Javascript and PHP, with a mysql database.
+              Data is input into HTML forms, using the jquery library the text is grabbed and sent to php on the backend where sql queries are made to insert the data. Every time a new post is made the entire page is wiped and repopulated with the
+              now current data. <br>
+              <br>
+              <p class='center'> <strong> How I chose the tools: </strong> </p>
+              Im going to need a database to store information to be displayed when a user comes back which means I’m going to need a database, MySQL can solve that problem. I’m going to need to use a language on the backend to communicate with that
+              database, I could keep it simple and use PHP, I want it to be dynamic and a single page application which means I need javascript.
+              <br><br> Maybe you’re building an application that does similar things on the back end and this saves you some time, so without further adieu this is how I built it.
+
+              I started off with writing a frame of the website in HTML, how I want the trips to be displayed what form for filling out a new trip will be like
+
+              From there I worked on grabbing all the data that was input into the HTML form and I used javascript for that. Once I had all the data printing to the console, the next step was putting it into a database. Before I could do that I
+              needed to pass the data to PHP, I had never used PHP before but stack overflow is there for a reason.
+
+              After some head banging I got it to the point where you could now submit a form, the data will be grabbed with javascript selectors and an ajax request is made with a php form as the URL and once in the php form a connection to a MySQL
+              database is started and an insert query is made.
+              <br><br>
+              <p class='center'> <strong> Great. </strong> </p>
+
+              Now I want to do the reverse. When the page is loaded I want to query the database and pull out all the information and display it on the page.
+
+              So the server gets a request from some IP address, and an HTML page is sent back to the server the javascript when the document is loaded makes an ajax request to a php page again this time the php filtering through a get request and
+              making a sql query “SELECT Blank,Blank,Blank from Blank; this information is then passed back to the javascript function which finds the correct div element to place it in and populates that div.
+
+              The board page follows the same methodology but simpler.
+            </p>
+            <p> The idea of hangman was born on a night after playing ball with some friends.We decided to take a trip together so inevitably the conversation turned to logisitics and that's when Kweider mentioned the idea of an application to
+              simplify coordination.
+            </p>
+          </article>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="footer">
+      <a target=_blank href="https://twitter.com/yabish92" class="fa fa-twitter fa-lg black"></a>
+      <a target=_blank href="https://www.linkedin.com/in/bisherk" class="fa fa-linkedin fa-lg black"></a>
+      <a target=_blank href="https://github.com/bkunbargi" class="fa fa-github fa-lg black"></a> <br>
+      <a class = 'black'> Email me @ b.kunbargi@gmail.com </a>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
