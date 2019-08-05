@@ -16,7 +16,7 @@
 }
 
 .header-date{
-  
+
 }
 
 .page-links {
@@ -76,8 +76,13 @@ a{
 
 .row{
 padding:20px;
+
 }
 
+
+.center-div{
+  margin-top:100px;
+}
 
 .post-content{
   background-color:white;

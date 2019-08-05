@@ -1,0 +1,17 @@
+<html>
+<body>
+<div id= 'outputs'>
+  <h1> Reddit Search Results </h1>
+
+{% for key, value in result %}
+          <div class = 'thread'>
+           <h2> {{ key }} </h2>
+           {% for val in value %}
+           <p> {{ val }} </p>
+           {% endfor %}
+          <div class = 'threads'>
+{% endfor %}
+</div>
+</body>
+
+</html>

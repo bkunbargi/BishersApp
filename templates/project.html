@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="static/css/project.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Hind&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="{{url_for('static', filename='js/projects.js')}}"></script>
   <title>Projects</title>
 </head>
 
@@ -50,107 +51,106 @@
 
         <div id = 'redditbot'  class='post-content'>
           <div class='header-date'>
-            <p class='date'>8/1/2019</p> <br>
             <h2 class='title'>Reddit Bot</h2>
             <img class = 'project-image' src = '/static/assets/snoo2.png'>
           </div>
           <p class = 'center'>Do a quick search of reddit to find exactly what you're looking for</p>
           <p class = 'center'>Anonymously respond to a comment using this third party account </p>
+
+          <div class="tab">
+            <button type="button" class="btn btn-primary" onclick="hideContent('reddit', 'search')">Search Reddit</button>
+             <button type="button" class="btn btn-primary" onclick="hideContent('reddit', 'post')">Respond Anonymously</button>
+          </div>
+          <br>
+
           <div class = 'formbox'>
-              <form class = 'formdisplay' action = '/redditbot' method = 'POST'>
-                <p> Search Reddit </p>
+              <form id = 'search' class = 'formdisplay reddit search' action = '/redditbot' method = 'POST'>
+                <p>A two step search function that pulls all related subreddits to a topic and <br> grabs all the comments from threads with the a specific keyword in the title. </p>
                 <input type = 'text' name = 'subkey' placeholder="Topic ex. NBA" class = 'redditinput'>
                 <input type = 'text' name = 'redditkeyword' placeholder="Subtopic ex. Lebron" class = 'redditinput'>
                 <input type = 'submit' name ='ugh'>
-                <br> <br>
-                <p> Anonymously Respond </p>
+              </form>
+
+              <form id = 'post' class = 'formdisplay reddit post' action = '/redditbot2' method = 'POST'>
+                <p>Reply to a comment keeping your username anonymous by using
+                 <br> an account associated with this bot to find the comment to respond to. </p>
                 <input type = 'text' name = 'madecomment' placeholder="Comment to respond" class = 'redditinput'>
-                <input type = 'text' name = 'subid' placeholder="Subreddit ID" class = 'redditinput'>
+                <input type = 'text' name = 'subid' placeholder="Thread ID" class = 'redditinput'>
                 <input type = 'text' name = 'uresponse' placeholder="Response" class = 'redditinput'>
 
                 <input type = 'submit' name ='ugh'>
               </form>
+
           </div>
 
           <div id = 'bigred' class = 'persiproj'>
-            <div class="tab">
-               <button class="tablinks" onclick="openCity(event, 'search')">Searching</button>
-               <button class="tablinks" onclick="openCity(event, 'post')">Responding</button>
-            </div>
 
-              <div id = 'search' class = 'tabcontent'>
-
-              <p>A two step search function that pulls all related subreddits to input 1 and grabs all the comments<br> from threads with Input 2 in the title.
-              Enter both keywords click submit, sit back for a minute
-              Then with a quick control+f that is simultaneously checking all threads at once to find the comment chain that has what you're looking for.
-              <br><br>Required Input:
-              Input 1: The type of subreddit that is relevant to what you're looking for. <br>
-              Input 2: The Keyword of what you're looking for, e.x. "I'm looking for information related to Django(Input 2)
-              I might find it in Web Development(Input 1) related subreddits" </p>
+              <div id = 'search' class = 'reddit search'>
+              <p class = 'center'>Required Input:<br>
+              Input 1: Subreddits keyword <br>
+              Input 2: Thread keyword </p>
               </div>
 
-              <div id = 'post' class = 'tabcontent'>
-
-              <p>Reply to a comment keeping your username anonymous:<br>
-                Uses an account associated with this bot to find the comment to respond to and responds with the submitted comment
-                <br><br>Required Input:<br>
-                Input 1: The thread ID(Input 1), can be found in the link page  PUT A PICTURE  <br>
-                Input 2: The comment that you want to respond to <br>
-                Input 3: Your desired response to that comment (Input 2) <br>
+              <div id = 'post' class = 'reddit post'>
+                <p class = 'center'>Required Input:<br>
+                Input 1: The comment that you want to respond to <br>
+                Input 2: The thread ID of the comment to respond to.<br>
+                Input 3: Your desired response to that comment <br>
               </p>
             </div>
 
         </div>
-
-
+        <div id= 'outputs'>
+        <h2 class = 'specialp'>{{info}}</h2>
+        </div>
         </div>
 
 
 
         <div id = 'twitterbot' class='post-content'>
           <div class='header-date'>
-            <p class='date'>8/1/2019</p> <br>
             <h2 class='title'>Twitter Bot</h2>
             <img class = 'project-image' src = '/static/assets/twitter.png'>
           </div>
-          <p>Tweet from my account</p>
+          <p class = 'center'>Send a Tweet from a public account <br>
+           Retweets the highest and lowest scoring sentimets pertaining to the keyword.</P>
 
           <div class = 'formbox'>
 
-              <form class = 'formdisplay' action = '/twitterbot' method = 'POST'>
+              <form id = tweet class = 'formdisplay twitter tweet' action = '/twitterbot' method = 'POST'>
                 <p> Tweet or Respond to someone. </p>
                 <input type = 'text' name = 'user_tweet' placeholder="Tweet">
                 <input type = 'text' name = 'responderhandle' placeholder="Tweeting @">
                 <input type = 'text' name = 'statusid' placeholder = 'Status Id'>
                 <input type = 'submit' name ='ugh'>
+              </form>
                 <br>
-                <p> Run a sentiment analyzer on a given keyword and have it tweeted! </p>
+              <form id = sentanaly class = 'formdisplay twitter sentanaly' action = '/twitterbot2' method = 'POST'>
+                <p> Retweets the highest and lowest scoring sentimets pertaining to the keyword. </p>
                 <input type = 'text' name = 'keyword1' placeholder="Sentinment Analysis">
                 <input type = 'submit' name ='ugh'>
               </form>
           </div>
 
-          <div id = 'tweetdude' class = 'persiproj'>
+          <div id = 'twittersentanaly' class = 'persiproj'>
 
             <div class="tab">
-               <button class="tablinks" onclick="openCity(event, 'SentAnaly')">Sentiment Analysis</button>
-               <button class="tablinks" onclick="openCity(event, 'tweetat')">Tweet @</button>
+               <button type="button" class="btn btn-primary" onclick="hideContent('twitter', 'sentanaly')">Sentiment Analysis</button>
+                <button type="button" class="btn btn-primary" onclick="hideContent('twitter', 'tweet')">Tweet Anonymously</button>
+          </div>
 
-            <div id = 'SentAnaly' class = 'tabcontent'>
-              <p>Keyword Sentiment Analysis:<br>
-                 Retweets the highest and lowest scoring sentimets pertaining to the keyword.
-              <br><br>Required Input:<br>
-              Keyword: This keyword is the only required input for this functionality.
+            <div id = 'sentanaly' class = 'twitter sentanaly'>
+              <br> <p class = 'center'> Required Input:<br>
+              Keyword to search for and perform sentiment analysis on.
             </p>
 
             </div>
-            <div id = 'tweetat' class = 'tabcontent'>
-              <p> Anonymous Tweeting: <br>
-                  Use the account associated with this bot to tweet at someone.
-              <br><br>Required Input:<br>
-              User Tweet: Your desired tweet <br>
-              Username: The username of the person you are responding to drop the '@'<br>
-              Status ID: Can be found in the URL when the tweet is open in your browser PICTURE  <br>
+            <div id = 'tweet' class = 'twitter tweet'>
+              <br> <p class = 'center'>Required Input:<br>
+              Input 1: The tweet to respond with. <br>
+              <br> Or additionally add
+              Input 2: The twitter username to respond to.<br>
+              Input 3: Twitter thread ID.
             </p>
 
             </div>
@@ -163,11 +163,11 @@
 
         <div id = 'instabot' class='post-content'>
           <div class='header-date'>
-            <p class='date'>8/1/2019</p> <br>
             <h2 class='title'>Instagram Bot</h2>
             <img class = 'project-image' src = '/static/assets/insta.png'>
           </div>
-          <p>Post images to a community run Instagram account</p>
+          <p class = 'center'>A community controlled Instagram page: <br>
+              Post with either a URL or choose a file to upload from computer</p>
           <div id = 'instaman' class = 'persiproj'>
 
                <div class = 'formbox'>
@@ -186,14 +186,11 @@
                     </form>
                 </div>
 
-            <div id = 'Posting' class = 'tabcontent'>
-              <p> A community controlled Instagram page: <br>
-                  Post with either a URL or choose a file to upload from computer
+            <div id = 'Posting'>
+              <p class = 'center'>
               <br><br>Required Input:<br>
-              First Input: Accepts the URL to an image <br>
-              Upload: To upload an image from hard drive and displays the preview<br>
-              One or the other only of the above <br>
-              Caption: Associates a caption and/or hashtags with the image being uploaded from URL or File <br>
+              Image URL or uploaded image <br>
+              Image Caption<br>
             </p>
 
             </div>
